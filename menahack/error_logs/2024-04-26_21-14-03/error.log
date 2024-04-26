@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "C:\Users\ASUS\Desktop\scrapy\venv\Lib\site-packages\botasaurus\decorators.py", line 562, in run_task
-    result = func(driver, data)
-             ^^^^^^^^^^^^^^^^^^
-  File "c:\Users\ASUS\Desktop\Mena Hackathon\menahack\menahack\spiders\google.py", line 9, in scrape_heading_task
-    heading = driver.text()
-              ^^^^^^^^^^^^^
-TypeError: AntiDetectDriver.text() missing 1 required positional argument: 'selector'
