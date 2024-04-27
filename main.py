@@ -1,5 +1,6 @@
 from Google_Search import *
 from Fetch_Page import *
+from De_duplicate import *
 
 def main():
     query = input("Enter your search query: ")
