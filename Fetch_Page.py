@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import tldextract
 import validators
+from Filtter_document import  *
 
 visitedSite = set()
 def fetchPage(url, depth):
@@ -28,19 +29,14 @@ def fetchPage(url, depth):
                 # If the tag is a header, update current_header
                 current_header = tag.text.strip()
             elif tag.name == 'p':
-                ### Add constrains here
-                ### first paragraph = tag.text
-                ### check that there's no word in the paragraph are more than 100 charachter to insure it's not a link
-                ### all(len(word) <= 100 for word in paragraph)
-                ### paragraph = paragraph.split()
-                ### Num of words > 20  len(paragraph)
-                ###max_special_symbols = len(paragraph) * 0.2
-                # Count the number of special symbols in the paragraph
-                # special_symbol_count = sum(1 for char in paragraph if char in string.punctuation)
-                ###
-                # If the tag is a paragraph, append it to the list along with its header if available
+
+                paragraph = tag.text
+                paragraph = check_the_document(paragraph)
+                if paragraph == "":
+                    continue
+
                 if current_header:
-                    paragraphs.append(f"{current_header}: {tag.text.strip()}")
+                    paragraphs.append(f"{current_header}: {paragraph}")
                 else:
                     paragraphs.append(tag.text.strip())
             elif tag.name == 'a':
