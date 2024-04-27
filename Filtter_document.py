@@ -1,3 +1,4 @@
+from clean_data import *
 def all_words_under_100_char(my_list):
     return all(len(word) <= 100 for word in my_list)
 
@@ -18,6 +19,7 @@ def check_the_document(my_list):
         paragraph = my_list.strip()
         if count_of_special_and_numbers(paragraph):
             ######### make the cleaning step here please
+            clean_text(paragraph)
             return paragraph
 
     return ""
