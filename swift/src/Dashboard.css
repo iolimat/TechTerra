@@ -1,0 +1,422 @@
+/* Set base font size for easier rem units */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+    transition: scroll-behavior 0.5s ease; /* Transition effect for scroll behavior */
+}
+
+/* Reset default body margin and set background and text color */
+body {
+    margin: 0;
+    background-color: #0F0D0E;
+    color: white;
+}
+
+/* Center content with a maximum width */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    margin: 4em; /* Margin around the navigation */
+}
+
+/* Logo styling */
+header img {
+    width: 100px;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Navigation list styles */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 4.1rem; /* Gap between navigation items */
+    margin: 0;
+}
+
+/* Navigation link styles */
+nav ul li a {
+    text-decoration: none;
+    color: black; /* Default link color */
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    position: relative;
+    color: white; /* Text color */
+    transition: font-size 0.3s; /* Smooth font size transition */
+}
+
+/* Active navigation link indicator */
+nav ul li a.active:before {
+    position: absolute;
+    content: "";
+    width: 35%; /* Width of the indicator */
+    height: 1px;
+    border-bottom: 2px solid white; /* Indicator color */
+    bottom: -6px;
+    color: white; /* Indicator color */
+}
+
+/* Navigation link hover effect */
+nav ul li a:before {
+    position: absolute;
+    content: "";
+    width: 0%; /* Initial width of the indicator */
+    height: 1px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    bottom: -6px;
+    transition: width .3s; /* Smooth transition for width change */
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    color: white;
+    font-weight: bold; /* Bold font on hover */
+    animation: increaseFont 0.5s forwards; /* Increase font size animation */
+}
+
+/* Font size animation on hover */
+@keyframes increaseFont {
+    to {
+        font-size: 1.8rem;
+    }
+}
+
+/* Font size animation on mouseout */
+nav ul li a:not(:hover) {
+    animation: decreaseFont 0.5s forwards; /* Decrease font size animation */
+}
+
+/* Font size animation keyframes */
+@keyframes decreaseFont {
+    from {
+        font-size: 1.8rem; /* Starting font size */
+    }
+    to {
+        font-size: 1.6rem; /* Font size on mouseout */
+    }
+}
+
+/* Hero Section styles */
+
+/* Two-column layout for hero section */
+.first {
+    display: flex;
+    gap: 8em; /* Gap between columns */
+    margin-top: 11em; /* Margin from the top */
+}
+
+/* Right column styling */
+.right-col {
+    float: left;
+    width: 45%;
+}
+
+/* Left column styling */
+.left-col {
+    float: left;
+    width: 55%;
+}
+
+/* Second section styles */
+.section-two {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25em; /* Margin from the top */
+}
+
+/* Our Vision section styles */
+.ourVision {
+    margin-top: 25em; /* Margin from the top */
+}
+
+/* Our Vision paragraph styles */
+.ourVision p {
+    font-size: 1.8em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Chatbot styles */
+.chat-bot {
+    position: fixed;
+    bottom: 0;
+    right: 20px; /* Distance from the right */
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat input field styles */
+.chat-bot input[type="text"] {
+    width: calc(100% - 20px); /* Input width */
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none; /* Remove outline on focus */
+    box-sizing: border-box;
+    margin-top: auto; /* Align input to the bottom */
+}
+/* Chat-bot message display */
+.chat-bot p {
+    margin-top: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: black;
+}
+
+/* Container for whitespace */
+.white-space {
+    position: relative;
+    width: 200px;
+    height: 500px;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 5.2rem;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Subheading styles */
+.subhead {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Call-to-action button container */
+.cta-btns {
+    margin: 5em 0;
+}
+
+/* Call-to-action buttons styles */
+.cta-btns, .secondary-cta {
+    display: flex;
+    gap: 2em;
+}
+
+/* Primary call-to-action button styles */
+.primary-cta {
+    background-color: #007bff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border-radius: 1.9em;
+    padding: 1em 2em;
+    transition: box-shadow 0.3s ease; /* Add transition for glow effect */
+}
+
+/* Primary call-to-action button hover effect */
+.primary-cta:hover {
+    box-shadow: 0 0 20px 1px rgba(167, 191, 217, 0.7); /* Glow effect */
+}
+
+/* Secondary call-to-action button styles */
+.secondary-cta {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 1em 0;
+    transition: font-size 0.3s; /* Smooth font size transition */
+}
+
+/* Icon styles within secondary call-to-action button */
+.secondary-cta svg {
+    width: 20px;
+    transition: transform .3s; /* Smooth transition for icon */
+}
+
+/* Secondary call-to-action button hover effect */
+.secondary-cta:hover svg {
+    transform: translateX(10px); /* Move icon to the right on hover */
+    text-decoration: none;
+}
+
+/* Secondary call-to-action button hover effect for text */
+.secondary-cta:hover {
+    text-decoration: underline; /* Underline text on hover */
+    color: white;
+    font-weight: bold;
+}
+
+/* News section styles */
+.news {
+    display: flex;
+    gap: 3em;
+    padding: 5em;
+    border: 1px solid black;
+    border-radius: .8em;
+    position: relative;
+}
+
+/* Confetti background effect for news section */
+.news:before {
+    position: absolute;
+    content: "";
+    background: url('../images/confetti.svg');
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    left: -20px;
+    z-index: 2;
+}
+
+/* Employees paragraph styles */
+p.employees {
+    font-size: 3.3rem;
+    margin: 0;
+    font-weight: 200;
+    line-height: 100%;
+}
+
+/* Details paragraph styles */
+p.details {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+/* Right column gallery styles */
+
+/* Grid layout for right column */
+.right-col {
+    display: grid;
+    gap: 2.3em; /* Gap between grid items */
+    grid-template-columns: repeat(2,auto); /* Two-column layout */
+    grid-template-areas:
+        "left ."
+        "left .";
+}
+
+/* Right column image styles */
+.right-img {
+    width: 50rem; /* Image width */
+}
+
+/* Image rotation animation */
+.right-img.rotate {
+    animation: rotate 10s linear infinite;
+}
+
+/* Keyframes for image rotation animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg); /* Initial rotation angle */
+    }
+    to {
+        transform: rotate(360deg); /* Final rotation angle */
+    }
+}
+
+/* Animation for right column images */
+.right-col .right-img {
+    animation: rotate 45s linear infinite;
+}
+
+/* Product price paragraph styles */
+p.product-price {
+    font-size: 1.8rem;
+}
+
+/* Hover effect for navigation links and secondary call-to-action buttons */
+nav ul li a:hover:before,
+.secondary-cta:hover {
+    width: 35%; /* Width of the hover effect */
+}
+
+/* Hover effect for secondary call-to-action buttons */
+.secondary-cta:hover svg {
+    transform: translateX(10px); /* Move icon to the right on hover */
+    text-decoration: none;
+}
+
+/* Hover effect for secondary call-to-action buttons text */
+.secondary-cta:hover {
+    text-decoration: underline; /* Underline text on hover */
+    color: white;
+    font-weight: bold;
+}
+
+/* Card hover effect */
+.card:hover {
+    background-size: 160%; /* Increase background size on hover */
+}
+
+/* Card details hover effect */
+.card:hover .card-details {
+    transform: translateY(-20px); /* Move card details upwards on hover */
+}
+
+/* Intro Animation */
+
+/* Keyframes for reveal animation */
+@keyframes reveal {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(0);
+    }
+}
+
+/* Main element animation for intro */
+main {
+    animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards; /* Grow in animation */
+    transform: scale(.4); /* Initial scale */
+}
+
+/* Keyframes for growIn animation */
+@keyframes growIn {
+    to {
+        transform: scale(1); /* Final scale */
+    }
+}
+
+/* Subheading 2 styles */
+.subhead2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    padding: 20px;
+    line-height: 2.5;
+}
+
+/* Subheading 2 paragraph styles */
+.subhead2 p {
+    margin-bottom: 15px;
+}
+
+/* Subheading 2 unordered list styles */
+.subhead2 ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nested unordered list styles */
+.subhead2 ul ul {
+    margin-left: 20px;
+}
+
+/* List item styles */
+.subhead2 ul li {
+    margin-bottom: 10px;
+}
+
+/* Strong emphasis in subheading */
+.subhead strong {
+    color: #fde1e1; /* Strong emphasis color */
+}
