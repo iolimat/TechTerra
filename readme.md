@@ -24,4 +24,3 @@ To get started with TechTerra, clone this repository and install the required de
 ```bash
 git clone https://github.com/iolimat/TechTerra/.git
 cd TechTerra
-npm install
