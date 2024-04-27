@@ -27,7 +27,10 @@ def main():
             paragraphs, pagelinks = fetchPage(link, depth)
         except Exception as e:
             continue
-        collection.append(paragraphs)
+
+        paragraphs = check_similarty_between_two_collections(paragraphs, paragraphs)
+        collection = check_similarty_between_two_collections(collection, paragraphs)
+
         if pagelinks != None:
             for i in pagelinks:
                 links.append((i,depth-1))
