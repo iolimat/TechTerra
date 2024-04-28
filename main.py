@@ -21,7 +21,7 @@ class UserInput(BaseModel):
     context:str
 
 
-client = OpenAI(api_key='sk-proj-bAs3yyVgvjmfK6b5rDGbT3BlbkFJao9wD6SjpMYhoIPclUKX')
+client = OpenAI(api_key='')
 
 system_message = '''
 You are a helpful assistant in field of data collection for artificial intelligence.
