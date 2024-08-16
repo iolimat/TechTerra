@@ -1,0 +1,6 @@
+beautifulsoup4
+googlesearch-python
+validators
+tiktoken
+tldextract
+sklearn
